@@ -1,8 +1,12 @@
 import sqlite3
 
 def get_db():
-    con = sqlite3.connect("database.db")
-    cur = connect.cursor()
-    
+    return sqlite3.connect("database.db")
 
-def get_username():
+def create_user(username, password_hash):
+    connect = get_db()
+    cursor = connect.cursor()
+    cursor.execute("INSERT INTO users (username, password_hash) VALUES (?, ?)", (username, password_hash))
+    connect.commit()
+    connect.close()
+
