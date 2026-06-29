@@ -10,3 +10,13 @@ def create_user(username, password_hash):
     connect.commit()
     connect.close()
 
+def get_user(username):
+    connect = get_db()
+    cursor = connect.cursor()
+
+    cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
+
+    user = cursor.fetchone()
+    connect.close()
+
+    return user
