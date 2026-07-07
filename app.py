@@ -19,13 +19,13 @@ def register():
     
         db.create_user(username, password_hash)
     
-        return f"User {username} has been created!"
+        flash('Account was created!')
+        return redirect(url_for("login"))
     return render_template('register.html')
     
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    # render_template('login.html')
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -35,11 +35,18 @@ def login():
         if user and check_password_hash(user["password_hash"], password):
             session['username'] = user['username']
             flash('Login was successful')
-            return redirect(url_for('homepage.html'))
+            return redirect(url_for("home")
         else:
-            return("Failed login")
+            flash("Invalid username and/or password")
+            return redirect(url_for("login"))
 
     return render_template('login.html')
+
+@app.route('/logout', methods=['POST'])
+def logout():
+    session.pop('user_id', None)
+
+    return redirect(url_for("home"))
 
 
 if __name__ == "__main__":
