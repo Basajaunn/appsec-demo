@@ -11,4 +11,5 @@ A Flask web application for learning application security. It includes intention
 - https://owasp.org/www-community/attacks/SQL_Injection
 - https://www.sqlitetutorial.net/
 - https://www.geeksforgeeks.org/sqlite/sqlite-tutorial/
+- https://medium.com/@icodewithben/flask-sqlite-login-and-register-form-48640743bf55
 - Youtube
