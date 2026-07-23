@@ -12,4 +12,6 @@ A Flask web application for learning application security. It includes intention
 - https://www.sqlitetutorial.net/
 - https://www.geeksforgeeks.org/sqlite/sqlite-tutorial/
 - https://medium.com/@icodewithben/flask-sqlite-login-and-register-form-48640743bf55
+- https://www.geeksforgeeks.org/python/how-to-build-a-web-app-using-flask-and-sqlite-in-python/
+- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form_modal
 - Youtube
