@@ -1,5 +1,6 @@
 # appsec-demo
 A Flask web application for learning application security. It includes intentional vulnerabilities and secure code for common vulnerabilities like SQL injection and XSS.
+I haven't used HTML before, so all webpages are extremely basic! This project is more demonstrating Python, SQL, and application security knowledge than HTML. Sorry it's not very nice to look at!
 
 
 ### Resources used:
